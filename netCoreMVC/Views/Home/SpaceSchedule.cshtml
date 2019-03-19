@@ -1,0 +1,22 @@
+﻿@model IEnumerable<netCoreMVC.Models.Data>
+
+@{
+    ViewData["Title"] = "Space Schedule for 2019";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Please see List of Space Schedule times below</p>
+
+@foreach (var item in Model) {
+    <ul>
+        
+        <li><th><b>Launch Date: </b></th>
+        @Html.DisplayFor(modelItem => item.launchDate)</li>
+        <li><th><b>Mission Data: </b></th>
+            @Html.DisplayFor(modelItem => item.missionData)</li>
+        <li><th><b>Mission Description: </b></th>
+            @Html.DisplayFor(modelItem => item.missionDesc)</li>
+    </ul>
+}
+
